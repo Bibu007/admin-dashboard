@@ -46,8 +46,10 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+/*        End of reset-------*/
+
 body, html{
-    height: 100%;
+    min-height: 100vh;       /*Better than height: 100%*/
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
@@ -118,6 +120,7 @@ img{
     padding: 10px;
     font-weight: 700;
     padding-right: 15%;
+    min-width: 290px;
 }
 
 .notifications p{
@@ -135,7 +138,8 @@ img{
    font-size: 1rem;
    gap: 15px;
    padding-left: 5%;
-   min-width: 352px;
+   min-width: 400px;
+   padding-bottom: 5px;
 }
 
 .user-welcome img{
@@ -162,9 +166,85 @@ img{
     color: white;
     font-family: 'Roboto';
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     border-radius: 50px;
     padding: 5px;
-    width: 90px
+    width: 6rem;
 }
+
+.article{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 20px 25px;
+}
+
+.grid-parent{
+    grid-template-rows: 1fr 8fr;
+    padding: 20px;
+}
+
+.grid-parent h3{
+    padding-bottom: 15px;
+}
+
+.article-grid-main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    gap: 30px;
+    
+}
+
+.card{
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+    height: 200px;
+    border-radius: 10px;
+    
+    font-size: 0.8rem;
+    background: linear-gradient(
+    to right,
+    #E2B646 2%,
+    white 2%
+  );
+}
+
+h3{
+    font-size: 1.2rem;
+}
+
+.card h3{
+    padding-bottom: 0px;
+}
+
+.card .text{
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 10%;
+}
+
+.card .buttons{
+    display: flex;
+    justify-content: flex-end;
+    gap: 5%;
+    padding: 3%;
+}
+
+.grid-sidebar{
+    padding: 20px;
+}
+
+.announcements-tile{
+    background-color: white;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 15%;
+}
+
+.announcements-card{
+    border-bottom: black;
+}
+
+
+
+
 
