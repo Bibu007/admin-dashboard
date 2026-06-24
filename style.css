@@ -1,15 +1,55 @@
-.roboto-heading {
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700; /* Bold */
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
+*:not(dialog) {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  /*display: block;*/
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
 
 body, html{
     height: 100%;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .container{
@@ -73,9 +113,58 @@ img{
     display: flex;
     align-items: center;
     justify-content: end;
-    font-size: 1rem;
+    font-size: 1.1rem;
     gap: 30px;
     padding: 10px;
-    font-weight: 600;
+    font-weight: 700;
     padding-right: 15%;
 }
+
+.notifications p{
+    min-width: 205px;
+}
+
+.user-info-section{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    padding: 0.5%;
+}
+
+.user-welcome{
+   display: flex;
+   font-size: 1rem;
+   gap: 15px;
+   padding-left: 5%;
+   min-width: 352px;
+}
+
+.user-welcome img{
+    height: 5rem;
+}
+
+.user-welcome div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user-info-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 320px;
+    gap: 10%;
+}
+
+.user-info-buttons button{
+    border: none;
+    background-color: #1992D4;
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    padding: 5px;
+    width: 90px
+}
+
